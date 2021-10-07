@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href = "stylesp.css"></link>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        .pd-table {
+            color: #fff; 
+            border: none;
+            width: 100%; 
+        }
+        .pd-table th, .pd-table td {
+            text-align: left;
+            padding: 8px;
+            border: none;
+        }
+        .pd-table th {
+            font-size: larger;
+        }
+        .fc {
+            width: 30%;
+        }
+        .sc {
+            width: 30%;
+        }
+        .tc {
+            width: 20%;
+        }
+        .pm-table {
+            color: #fff; 
+            border: none;
+            width: 100%; 
+        }
+        .pm-table th, .pm-table td {
+            text-align: left;
+            padding: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+        <li>My Portfolio</li>
+        <li>Top Stocks</li>
+        <li>Latest News</li>
+        <li>Markets</li>
+        <li>Stock Ideas</li>
+        <li>Dividends</li>
+        </ul>
+    </div>
+    <h1 class = "portfolioTitle">Portfolio Prediction Dashboard</h1>
+    <div style="width: 50%; display: inline-block;">
+        <div style="margin: 2%; background-color: #002366; float: left; margin-bottom: 10%;">
+            <h2 style="color: #fff; margin: 1%;">Current Assets</h2>
+            <table class="pd-table">
+                <thead>
+                    <tr>
+                        <th class="fc"></th>
+                        <th class="sc">Unrealized Gain</th>
+                        <th class="tc" colspan="2">Realized Gain</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Latest Value</td>
+                        <td class="sc">Overall Gain</td>
+                        <td class="tc" colspan="2">Realized Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹62,21,768</td>
+                        <td class="sc">₹9,21,758</td>
+                        <td class="tc" colspan="2">₹5,75,866</td>
+                    </tr>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Investment Cost</td>
+                        <td class="sc">Today's Gain</td>
+                        <td class="tc">Capital Gain</td> 
+                        <td>Other Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹53,00,00</td>
+                        <td class="sc">₹8,403,21</td>
+                        <td class="tc">₹5,50,866</td>
+                        <td>₹15,000</td>
+                    </tr>
+                </tbody> 
+            </table>
+            <hr style="width:100%;">
+            <table class="pm-table">
+                <tr>
+                    <th>Portfolio Beta</th>
+                    <th>Treynor Ratio</th>
+                    <th>Jensen's Alpha</th>
+                    <th>VAR(99%)</th>
+                </tr>
+                <tr>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-left: 2%;">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Stock Name/Predicted Price</th>
+                        <th>Total Gain %</th>
+                        <th>Latest Value</th>
+                        <th>Investment cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INFY</td>
+                        <td>1,700.00</td>
+                        <td>1,561.00</td>
+                        <td>-106.00</td>
+                    </tr>
+                    <tr>
+                        <td>IRCTC</td>
+                        <td>2,000.00</td>
+                        <td>2,030.50</td>
+                        <td>41.50</td>
+                    </tr>
+                    <tr>
+                        <td>TATACONSUM</td>
+                        <td>650.00</td>
+                        <td>752.65</td>
+                        <td>143.65</td>
+                    </tr>
+                    <tr>
+                        <td>HINDUNILVR</td>
+                        <td>2,200.00</td>
+                        <td>2,478.54</td>
+                        <td>298.54</td>
+                    </tr>
+                    <tr>
+                        <td>TITAN</td>
+                        <td>1,400.00</td>
+                        <td>1,735.80</td>
+                        <td>335.80</td>
+                    </tr>
+                    <tr>
+                        <td>TCS</td>
+                        <td>3,500.00</td>
+                        <td>3,342.00</td>
+                        <td>-146.00</td>
+                    </tr>
+                    <tr>
+                        <td>ATGL</td>
+                        <td>950.00</td>
+                        <td>1,019.85</td>
+                        <td>69.85</td>
+                    </tr>
+                    <tr>
+                        <td>DIVISLAB</td>
+                        <td>4,100.00</td>
+                        <td>4,415.70</td>
+                        <td>315.70</td>
+                    </tr>
+                    <tr>
+                        <td>INDIAMART</td>
+                        <td>6,500.00</td>
+                        <td>7,002.00</td>
+                        <td>514.00</td>
+                    </tr>
+                    <tr>
+                        <td>NESTLEIND</td>
+                        <td>15,000.00</td>
+                        <td>17,689.65</td>
+                        <td>2719.65</td>
+                    </tr>
+                    
+                <tbody>
+            </table>
+        </div>
+    </div>
+    <div style="width: 50%; float: right;">
+        <div style="background-color: #002366;">
+            <h2 style="color: #fff; margin: 1%;">August Assets</h2>
+            <table class="pd-table">
+                <thead>
+                    <tr>
+                        <th class="fc"></th>
+                        <th class="sc">Unrealized Gain</th>
+                        <th class="tc" colspan="2">Realized Gain</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Latest Value</td>
+                        <td class="sc">Overall Gain</td>
+                        <td class="tc" colspan="2">Realized Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹62,21,768</td>
+                        <td class="sc">₹9,21,758</td>
+                        <td class="tc" colspan="2">₹5,75,866</td>
+                    </tr>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Investment Cost</td>
+                        <td class="sc">Today's Gain</td>
+                        <td class="tc">Capital Gain</td> 
+                        <td>Other Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹53,00,00</td>
+                        <td class="sc">₹8,403,21</td>
+                        <td class="tc">₹5,50,866</td>
+                        <td>₹15,000</td>
+                    </tr>
+                </tbody> 
+            </table>
+            <hr style="width:100%;">
+            <table class="pm-table">
+                <tr>
+                    <th>Portfolio Beta</th>
+                    <th>Treynor Ratio</th>
+                    <th>Jensen's Alpha</th>
+                    <th>VAR(99%)</th>
+                </tr>
+                <tr>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                </tr>
+            </table>
+        </div>
+        <div style="background-color: #002366;">
+            <h2 style="color: #fff; margin: 1%;">September Assets</h2>
+            <table class="pd-table">
+                <thead>
+                    <tr>
+                        <th class="fc"></th>
+                        <th class="sc">Unrealized Gain</th>
+                        <th class="tc" colspan="2">Realized Gain</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Latest Value</td>
+                        <td class="sc">Overall Gain</td>
+                        <td class="tc" colspan="2">Realized Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹62,21,768</td>
+                        <td class="sc">₹9,21,758</td>
+                        <td class="tc" colspan="2">₹5,75,866</td>
+                    </tr>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Investment Cost</td>
+                        <td class="sc">Today's Gain</td>
+                        <td class="tc">Capital Gain</td> 
+                        <td>Other Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹53,00,00</td>
+                        <td class="sc">₹8,403,21</td>
+                        <td class="tc">₹5,50,866</td>
+                        <td>₹15,000</td>
+                    </tr>
+                </tbody> 
+            </table>
+            <hr style="width:100%;">
+            <table class="pm-table">
+                <tr>
+                    <th>Portfolio Beta</th>
+                    <th>Treynor Ratio</th>
+                    <th>Jensen's Alpha</th>
+                    <th>VAR(99%)</th>
+                </tr>
+                <tr>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                </tr>
+            </table>
+        </div>
+        <div style="background-color: #002366;">
+            <h2 style="color: #fff; margin: 1%;">October Assets</h2>
+            <table class="pd-table">
+                <thead>
+                    <tr>
+                        <th class="fc"></th>
+                        <th class="sc">Unrealized Gain</th>
+                        <th class="tc" colspan="2">Realized Gain</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Latest Value</td>
+                        <td class="sc">Overall Gain</td>
+                        <td class="tc" colspan="2">Realized Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹62,21,768</td>
+                        <td class="sc">₹9,21,758</td>
+                        <td class="tc" colspan="2">₹5,75,866</td>
+                    </tr>
+                    <tr style="font-weight: 900;">
+                        <td class="fc">Investment Cost</td>
+                        <td class="sc">Today's Gain</td>
+                        <td class="tc">Capital Gain</td> 
+                        <td>Other Gain</td>
+                    </tr>
+                    <tr>
+                        <td class="fc">₹53,00,00</td>
+                        <td class="sc">₹8,403,21</td>
+                        <td class="tc">₹5,50,866</td>
+                        <td>₹15,000</td>
+                    </tr>
+                </tbody> 
+            </table>
+            <hr style="width:100%;">
+            <table class="pm-table">
+                <tr>
+                    <th>Portfolio Beta</th>
+                    <th>Treynor Ratio</th>
+                    <th>Jensen's Alpha</th>
+                    <th>VAR(99%)</th>
+                </tr>
+                <tr>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                    <td>0.258</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

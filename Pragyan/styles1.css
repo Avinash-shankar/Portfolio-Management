@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+  }
+  .up{
+    color:green
+  }
+  .down{
+    color:red;
+  }
+  body{
+    background: white;
+  }
+  .menu{
+    background: #002366;
+    text-align: left;
+    width: 100%;
+  }
+  .menu li{
+    color: white;
+  }
+  .port1{
+    margin-top: 10%;
+    margin-left: 10%;
+    display: inline-block;
+    color: #002366;
+    
+  }
+  .port1 h1{
+    color: #002366
+  }
+  .port1 ul{
+    margin-top:10%;
+  }
+  .port1 li{
+    margin-top:5%;
+  }
+  .port1 h3{
+    margin-top:10%;
+    color: #f64c72;
+  }
+  .port2{
+    margin-top: 10%;
+    display: inline-block;
+    color: #002366;
+  }
+  .port2 ul{
+    margin-top:10%;
+  }
+  .port2 li{
+    margin-top:5%;
+  }
+  .port2 h3{
+    margin-top:10%;
+    color: #f64c72
+  }
+  .port2 h1{
+    color: #002366
+  }
+  .menu  ul{
+    display : inline-flex;
+    list-style : none;
+    color: #fff;
+  }
+  .menu ul li{
+  
+    width: 100px;
+    margin: 0px;
+    padding: 15px;
+  }
+  
+  #portbutton{
+    margin:100px;
+    margin-left: 10%;
+    background-color: black; 
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 200px;
+  }

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href = "stylesp.css"></link>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body onload = "initialFunctioninvestment()">
+  
+  <div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
+    <div class="ticker-item">NIFTY 50 15748.45<span class = "down"> &nbsp -0.42% <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">HCLTECH 985.05 <span class = "down"> &nbsp  -0.03%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">CIPLA 980.02 <span class = "up"> &nbsp  1.76%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">HINDUNILVR 2491.00 <span class = "up"> &nbsp  1.25%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">TATASTEEL 1174.25 <span class = "down">&nbsp  -0.82%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">BHARTIARTL 525.90 <span class = "down">&nbsp  -1.00%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">NESTLEIND 17640.00 <span class = "up"> &nbsp  0.76%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">DRREDDY 5444.90 <span class = "up"> &nbsp  0.75%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">ASIANPAINT 3003.00 <span class = "up"> &nbsp  0.67%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">TCS 3335.25 <span class = "down"> &nbsp  -0.04%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">BPCL 466.70 <span class = "down"> &nbsp  -0.10%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">INDUSINDBK 1014.75 <span class = "up"> &nbsp  0.58%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">NTPC 116.75 <span class = "up"> &nbsp  0.52%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">HDFCBANK 1500.15 <span class = "down">&nbsp  -0.11%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">BAJFINANCE 6052.00 <span class = "up"> &nbsp  0.25%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">HDFC 2500.00 <span class = "up"> &nbsp  0.20%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">RELIANCE 2090.00 <span class = "up"> &nbsp  0.19%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">TITAN 1730.00 <span class = "up"> &nbsp  0.11%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">SUNPHARMA 677.00 <span class = "up"> &nbsp  0.10%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">TATAMOTORS 342.30 <span class = "down">&nbsp  -0.15%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">LT 1512.00 <span class = "down">&nbsp  -0.16%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">ITC 203.25 <span class = "down">&nbsp  -0.17%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">BRITANNIA 3654.20 <span class = "down">&nbsp  -0.36%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">SBILIFE 998.00 <span class = "down">&nbsp  -0.41%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">UPL 805.50 <span class = "down">&nbsp  -0.44%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">DIVISLAB 4362.30 <span class = "up"> &nbsp  1.11%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">HEROMOTOCO 2930.00 <span class = "down">&nbsp  -0.46%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">TATACONSUM 761.05 <span class = "down">&nbsp  -0.62%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">INFY 1562.00 <span class = "down">&nbsp  -0.62%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">POWERGRID 3253.02 <span class = "up"> &nbsp  1.90%  <img src="green_arrow.png" width = 15px height = 15px></span></div>
+    <div class="ticker-item">COALINDIA 145.60 <span class = "down">&nbsp  -1.60%  <img src="red_arrow.png" width = 15px height = 15px></span></div>
+  </div></div></div>
+<div class="menu">
+  <ul>
+    <li>My Portfolio</li>
+    <li>Top Stocks</li>
+    <li>Latest News</li>
+    <li>Markets</li>
+    <li>Stock Ideas</li>
+    <li>Dividends</li>
+  </ul>
+</div>
+<div>
+<div class = "port1" style="margin-left: 10%;">
+<h1> Portfolio 1</h1>
+<ul>
+    <li>Volatitlity: <span id = "volatility1">0.201015865</span></li>
+    <li>5 Year Return: <span id = "fiveyear1">0.2925572062</span></li>
+    <h3>Performance Measures</h3>
+    <li>Portfolio Beta: <span id = "beta1">0.897</span></li>
+    <li>Treynor Ratio: <span id = "treynor1">0.258</span></li>
+    <li>Jensen's Alpha: <span id = "jensen1">0.152</span></li>
+    <li>VAR(99%): <span id = "var1">0.175</span></li>
+   
+  </ul>
+  <div class = "c1"><canvas id="chart1" style="margin-top:120px;max-width:100%;margin-left:auto;"></canvas></div>
+</div>
+<div class = "port2" style="margin-right: 30%;">
+  <h1> Portfolio 2</h1>
+  <ul>
+    <li>Volatitlity: <span id = "volatility2">0.2565217071</span></li>
+    <li>5 Year Return: <span id = "fiveyear2">0.35463164</span></li>
+    <h3>Performance Measures</h3>
+    <li>Portfolio Beta: <span id = "beta2">0.939</span></li>
+    <li>Treynor Ratio: <span id = "treynor2">0.313</span></li>
+    <li>Jensen's Alpha: <span id = "jensen2">0.210</span></li>
+    <li>VAR(99%): <span id = "var2">0.242</span></li>
+  </ul>
+  <div class = "c2" ><canvas id="chart2" style="margin-top:120px;width:100%;margin-left:auto;"></canvas></div>
+</div>
+</div>
+<div class = "createPortfolio">
+  <button id = "portbutton" class = "portbutton" style="margin-left: 10%;">Create Portfolio</button>
+</div> 
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class = "modalText">Create Portfolio</p>
+    <label for="portfolioName">Name:</label>&nbsp;&nbsp;<input type = "text"><br>
+    <button id = "portbutton2" class = "portbutton">Create Portfolio</button>
+    <script type="text/javascript">
+      document.getElementById("portbutton2").onclick = function () {
+          location.href = "./portfolioDashboard.html";
+      };
+  </script>
+  </div>
+
+</div>
+
+<script>
+
+new Chart("chart1", {
+  type: "doughnut",
+  data: {
+  labels: [
+    'INFY',
+    'IRCTC',
+    'TATACONSUM',
+    'HINDUNILVR',
+    'TCS',
+    'ATGL',
+    'DIVISLAB',
+    'INDIAMART',
+    'TITAN',
+    'NESTLEIND',
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [0.446, 22.985, 2.21, 1.616, 0.019, 37.164, 0.746, 32.087, 0.231, 2.495],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)',
+      'rgb(34,139,34)',
+      'rgb(0,0,128)',
+      'rgb(139,0,139)',
+      'rgb(210,105,30)',
+      'rgb(119,136,153)',
+      'rgb(178,34,34)'
+    ],
+    hoverOffset: 4,
+      }]
+},options: {
+         legend: {
+            display: false
+         },
+         
+    }
+});
+new Chart("chart2", {
+  type: "doughnut",
+  data: {
+  labels: [
+  'INFY',
+    'IRCTC',
+    'TATACONSUM',
+    'HINDUNILVR',
+    'TCS',
+    'ATGL',
+    'DIVISLAB',
+    'INDIAMART',
+    'DIXON',
+    'NESTLEIND',
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [0.415, 20.8, 1.412,0.961,0.019,34.796,0.688,9.993,29.102,1.814],
+    backgroundColor: [
+    'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)',
+      'rgb(34,139,34)',
+      'rgb(0,0,128)',
+      'rgb(139,0,139)',
+      'rgb(210,105,30)',
+      'rgb(119,136,153)',
+      'rgb(178,34,34)'
+    ],
+    hoverOffset: 4
+  }]
+},options: {
+         legend: {
+            display: false
+         },
+         
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href = "stylesp.css"></link>
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<div class="menu">
+    <ul>
+      <li>My Portfolio</li>
+      <li>Top Stocks</li>
+      <li>Latest News</li>
+      <li>Markets</li>
+      <li>Stock Ideas</li>
+      <li>Dividends</li>
+    </ul>
+  </div>
+<body onload= "initialFunctionportfolio()" id = "DashBod">
+<h1 class = "portfolioTitle">Portfolio Prediction Dashboard</h1>
+<h2 class = "myAssets">Current Assets</h2>
+<div class = "inlineGains">
+    <h3 class = "tableHeads">Unrealized Gain</h3>
+    
+    <h3 class = "tableHeads">Realized Gain</h3>
+    
+</div>
+<div class = "latestValueBlock">
+    <h4 class = "latestValue">Latest Value</h4>
+    <p id = "latestVal">₹62,21,768</p>
+</div>
+<div class = "investmentCostBlock">
+    <h4 class = "investmentBlock">Investment Cost</h4>
+    <p id = "investVal">₹53,00,00</p>
+</div>
+<div class = "overallGainBlock">
+    <h4 class = "overallGain">Overall Gain</h4>
+    <p id = "gainVal">₹9,21,758</p>
+</div>
+<div class = "realizedGainBlock">
+    <h4 class = "realizedGain">Realized Gain</h4>
+    <p id = "rgainVal">₹5,75,866</p>
+</div>
+<div class = "todayGainBlock">
+    <h4 class = "todayGain">Today's Gain</h4>
+    <p id = "tgainVal">₹8,403,21</p>
+</div>
+<div class = "capitalGainBlock">
+    <h4 class = "capitalGain">Capital Gain</h4>
+    <p id = "cgainVal">₹5,50,866</p> 
+</div>
+<div class = "otherGainBlock">
+    <h4 class = "otherGain">Other Gain</h4>
+    <p id = "ogainVal">₹15,000</p> 
+    <div class = "box1" ></div>
+    <div class = "box2"></div>   
+</div>
+<hr class = "seperator" style="width:50%;">
+<div class = "betaBlock">
+    
+    <h4 class = "otherGain">Portfolio Beta</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "treynorBlock">
+    <h4 class = "otherGain">Treynor Ratio</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "jensenBlock">
+    <h4 class = "otherGain">Jensen's Alpha</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "varBlock">
+    <h4 class = "otherGain">VAR(99%)</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+
+<div class="table-wrapper">
+  <table class="fl-table">
+      <thead>
+      <tr>
+          <th>Stock Name/Predicted Price</th>
+          <th>Total Gain %</th>
+          <th>Latest Value</th>
+          <th>Investment cost</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>INFY</td>
+          <td>1,700.00</td>
+          <td>1,561.00</td>
+          <td>-106.00</td>
+      </tr>
+      <tr>
+          <td>IRCTC</td>
+          <td>2,000.00</td>
+          <td>2,030.50</td>
+          <td>41.50</td>
+      </tr>
+      <tr>
+          <td>TATACONSUM</td>
+          <td>650.00</td>
+          <td>752.65</td>
+          <td>143.65</td>
+      </tr>
+      <tr>
+          <td>HINDUNILVR</td>
+          <td>2,200.00</td>
+          <td>2,478.54</td>
+          <td>298.54</td>
+      </tr>
+      <tr>
+          <td>TITAN</td>
+          <td>1,400.00</td>
+          <td>1,735.80</td>
+          <td>335.80</td>
+      </tr>
+      <tr>
+          <td>TCS</td>
+          <td>3,500.00</td>
+          <td>3,342.00</td>
+          <td>-146.00</td>
+      </tr>
+      <tr>
+          <td>ATGL</td>
+          <td>950.00</td>
+          <td>1,019.85</td>
+          <td>69.85</td>
+      </tr>
+      <tr>
+          <td>DIVISLAB</td>
+          <td>4,100.00</td>
+          <td>4,415.70</td>
+          <td>315.70</td>
+      </tr>
+      <tr>
+          <td>INDIAMART</td>
+          <td>6,500.00</td>
+          <td>7,002.00</td>
+          <td>514.00</td>
+      </tr>
+      <tr>
+          <td>NESTLEIND</td>
+          <td>15,000.00</td>
+          <td>17,689.65</td>
+          <td>2719.65</td>
+      </tr>
+      
+      <tbody>
+  </table>
+</div>
+ 
+       
+
+
+
+
+<div id = "m1assets">
+<h2 class = "myAssets">August Assets</h2>
+<div class = "inlineGains">
+    <h3 class = "tableHeads">Unrealized Gain</h3>
+    
+    <h3 class = "tableHeads">Realized Gain</h3>
+    
+</div>
+<div class = "latestValueBlock">
+    <h4 class = "latestValue">Latest Value</h4>
+    <p id = "latestVal">₹62,21,768</p>
+</div>
+<div class = "investmentCostBlock">
+    <h4 class = "investmentBlock">Investment Cost</h4>
+    <p id = "investVal">₹53,00,00</p>
+</div>
+<div class = "overallGainBlock">
+    <h4 class = "overallGain">Overall Gain</h4>
+    <p id = "gainVal">₹9,21,758</p>
+</div>
+<div class = "realizedGainBlock">
+    <h4 class = "realizedGain">Realized Gain</h4>
+    <p id = "rgainVal">₹5,75,866</p>
+</div>
+<div class = "todayGainBlock">
+    <h4 class = "todayGain">Today's Gain</h4>
+    <p id = "tgainVal">₹8,403,21</p>
+</div>
+<div class = "capitalGainBlock">
+    <h4 class = "capitalGain">Capital Gain</h4>
+    <p id = "cgainVal">₹5,50,866</p> 
+</div>
+<div class = "otherGainBlock">
+    <h4 class = "otherGain">Other Gain</h4>
+    <p id = "ogainVal">₹15,000</p> 
+    <div class = "box1" ></div> 
+</div>
+<hr class = "seperator" style="width:750px;">
+<div class = "betaBlock">
+    <h4 class = "otherGain">Portfolio Beta</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "treynorBlock">
+    <h4 class = "otherGain">Treynor Ratio</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "jensenBlock">
+    <h4 class = "otherGain">Jensen's Alpha</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "varBlock">
+    <h4 class = "otherGain">VAR(99%)</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+
+</div>
+
+
+
+
+<div id = "m2assets">
+<h2 class = "myAssets">September Assets</h2>
+<div class = "inlineGains">
+    <h3 class = "tableHeads">Unrealized Gain</h3>
+    
+    <h3 class = "tableHeads">Realized Gain</h3>
+    
+</div>
+<div class = "latestValueBlock">
+    <h4 class = "latestValue">Latest Value</h4>
+    <p id = "latestVal">₹62,21,768</p>
+</div>
+<div class = "investmentCostBlock">
+    <h4 class = "investmentBlock">Investment Cost</h4>
+    <p id = "investVal">₹53,00,00</p>
+</div>
+<div class = "overallGainBlock">
+    <h4 class = "overallGain">Overall Gain</h4>
+    <p id = "gainVal">₹9,21,758</p>
+</div>
+<div class = "realizedGainBlock">
+    <h4 class = "realizedGain">Realized Gain</h4>
+    <p id = "rgainVal">₹5,75,866</p>
+</div>
+<div class = "todayGainBlock">
+    <h4 class = "todayGain">Today's Gain</h4>
+    <p id = "tgainVal">₹8,403,21</p>
+</div>
+<div class = "capitalGainBlock">
+    <h4 class = "capitalGain">Capital Gain</h4>
+    <p id = "cgainVal">₹5,50,866</p> 
+</div>
+<div class = "otherGainBlock">
+    <h4 class = "otherGain">Other Gain</h4>
+    <p id = "ogainVal">₹15,000</p> 
+    <div class = "box1" ></div> 
+</div>
+<hr class = "seperator" style="width:750px;">
+<div class = "betaBlock">
+    <h4 class = "otherGain">Portfolio Beta</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "treynorBlock">
+    <h4 class = "otherGain">Treynor Ratio</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "jensenBlock">
+    <h4 class = "otherGain">Jensen's Alpha</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "varBlock">
+    <h4 class = "otherGain">VAR(99%)</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+</div>
+
+
+
+<div id = "m3assets">
+<h2 class = "myAssets">October Assets</h2>
+<div class = "inlineGains">
+    <h3 class = "tableHeads">Unrealized Gain</h3>
+    
+    <h3 class = "tableHeads">Realized Gain</h3>
+    
+</div>
+<div class = "latestValueBlock">
+    <h4 class = "latestValue">Latest Value</h4>
+    <p id = "latestVal">₹62,21,768</p>
+</div>
+<div class = "investmentCostBlock">
+    <h4 class = "investmentBlock">Investment Cost</h4>
+    <p id = "investVal">₹53,00,00</p>
+</div>
+<div class = "overallGainBlock">
+    <h4 class = "overallGain">Overall Gain</h4>
+    <p id = "gainVal">₹9,21,758</p>
+</div>
+<div class = "realizedGainBlock">
+    <h4 class = "realizedGain">Realized Gain</h4>
+    <p id = "rgainVal">₹5,75,866</p>
+</div>
+<div class = "todayGainBlock">
+    <h4 class = "todayGain">Today's Gain</h4>
+    <p id = "tgainVal">₹8,403,21</p>
+</div>
+<div class = "capitalGainBlock">
+    <h4 class = "capitalGain">Capital Gain</h4>
+    <p id = "cgainVal">₹5,50,866</p> 
+</div>
+<div class = "otherGainBlock">
+    <h4 class = "otherGain">Other Gain</h4>
+    <p id = "ogainVal">₹15,000</p>
+    <div class = "box1" ></div> 
+</div>
+<hr class = "seperator" style="width:750px;">
+<div class = "betaBlock">
+    <h4 class = "otherGain">Portfolio Beta</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "treynorBlock">
+    <h4 class = "otherGain">Treynor Ratio</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "jensenBlock">
+    <h4 class = "otherGain">Jensen's Alpha</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+<div class = "varBlock">
+    <h4 class = "otherGain">VAR(99%)</h4>
+    <p id = "ogainVal">0.258</p> 
+</div>
+</div>
+
+
+</body>

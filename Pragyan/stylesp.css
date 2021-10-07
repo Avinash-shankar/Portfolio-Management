@@ -1,0 +1,552 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style-type: none;
+}
+.up{
+  color:green
+}
+.down{
+  color:red;
+}
+body{
+  background: white;
+}
+.menu{
+  background: #002366;
+  text-align: left;
+  width: 100%;
+}
+.menu li{
+  color: white;
+}
+.port1{
+  margin-top: 80px;
+  margin-left: 200px;
+  display: inline-block;
+  color: #002366;
+  
+}
+.port1 h1{
+  color: #002366
+}
+.port1 ul{
+  margin-top:20px;
+}
+.port1 li{
+  margin-top:5px;
+}
+.port1 h3{
+  margin-top:15px;
+  color: #f64c72;
+}
+.port2{
+  margin-top: 80px;
+  margin-left: 200px;
+  display: inline-block;
+  color: #002366;
+}
+.port2 ul{
+  margin-top:20px;
+}
+.port2 li{
+  margin-top:5px;
+}
+.port2 h3{
+  margin-top:15px;
+  color: #f64c72
+}
+.port2 h1{
+  color: #002366
+}
+.menu  ul{
+  display : inline-flex;
+  list-style : none;
+  color: #fff;
+}
+.menu ul li{
+
+  width: 100px;
+  margin: 0px;
+  padding: 15px;
+}
+
+#portbutton{
+  margin:100px;
+  margin-left: 200px;
+  background-color: black; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+}
+
+
+/* The Close Button */
+.close {
+  color:black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* OUTER CONTAINER */
+.tcontainer {
+  
+  width: 100%;
+  overflow: hidden; /* Hide scroll bar */
+}
+ 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 100%;
+  padding-left: 100%; /* Push contents to right side of screen */
+  background-color: rgb(0, 0, 0);
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+  
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 100s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  display: inline-block; /* Lay items in a horizontal line */
+  padding: 0 2rem;
+  color:white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  color: white;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #0B0c10;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+label {
+  display: inline-block;
+    margin-top: 20px;
+ 
+}
+#portbutton2{
+  margin-top:50px;
+  margin-left:30%;
+  background-color: white; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  border-radius:12px;
+}
+.modalText{
+  font-size: larger;
+}
+.portfolioTitle{
+  margin:50px;
+  color: #002366;
+
+}
+.c1{
+  margin-top:-25%;
+  margin-left:5%;
+}
+.c2{
+  margin-top:-25%;
+  margin-left:5%;
+
+}
+/*START OF portfolioDashboard*/
+#dashboard{
+  margin:50px;
+  margin-top:10px;
+}
+#DashBod{
+ color: white; 
+}
+.myAssets{
+  color:white;
+  margin:50px;
+}
+.inlineGains{
+  display: block;
+  margin-top:-30px;
+  margin-left: 287px;
+}
+.tableHeads{
+  display: inline-block;
+  margin-left: 30px;
+  text-align: center;
+  
+}
+.latestValueBlock{
+  margin: 50px;
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.investmentCostBlock{
+  margin: 50px;
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.overallGainBlock{
+  display: block;
+  margin-left: 317px;
+  margin-top:-100px;
+}
+.realizedGainBlock{
+  margin-left:490px;
+  margin-top:-48px;
+}
+#cgainVal{
+  margin-top:5px;
+}
+#tgainVal{
+  margin-top:5px;
+}
+#investVal{
+  margin-top:5px;
+}
+#latestVal{
+  margin-top:5px;
+}
+#gainVal{
+  margin-top:5px;
+}
+#ogainVal{
+  margin-top:5px;
+}
+#rgainVal{
+  margin-top:5px;
+}
+.todayGainBlock{
+  margin-left: 317px;
+  margin-top:0px;
+}
+.capitalGainBlock{
+  margin-left:490px;
+  margin-top:-47px;
+}
+.otherGainBlock{
+  margin-left: 600px;
+  margin-top:-47px;
+}
+.betaBlock{
+  margin: 50px;
+  margin-top: 20px;
+}
+.seperator{
+  margin-top:-100px;
+  margin-left:40px;
+  
+}
+.treynorBlock{
+  margin-left: 270px;
+  margin-top:-100px;
+}
+.jensenBlock{
+  margin-left:490px;
+  margin-top:-48px;
+}
+.varBlock{
+  margin-left: 680px;
+  margin-top:-47px;
+} 
+#m1assets{
+  margin-left:50%;
+  margin-top:-900px;
+}
+#m2assets{
+  margin-left:50%;
+}
+#m3assets{
+  margin-left:50%;
+}
+.box1{
+  width:750px;height:320px;border:1px  solid #002366;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg,#002366    , #002366 90%);
+  margin-top: -190px;
+  margin-left:-560px;
+}
+.box2{
+  border:1px black;
+}
+
+/*START OF portfolioComp*/
+.CompositionTitle{
+  margin:50px;
+}
+.performanceMeasures{
+  margin: 50px;
+  display: inline-block;
+  color: #002366;
+}
+.performanceMeasures h1{
+  color: #002366
+}
+.performanceMeasures ul{
+  margin-top:20px;
+}
+.performanceMeasures li{
+  margin-top:10px;
+}
+.performanceMeasures h3{
+  margin-top:15px;
+  color: #002366;
+}
+table, th, td {
+  border: 1px solid black;
+}
+.stockInput{
+  margin-left:50%;
+  margin-top: -150px;
+}
+.stockInput2{
+  margin-top:20px;
+  margin-left : 50%;
+}
+#container{
+  margin-top:400px;
+}
+
+.table-wrapper{
+  margin: 10px 1.9% 70px;
+  margin-top: 100px;
+}
+
+.fl-table {
+  margin: 0%;
+  color:black;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: normal;
+  border-collapse: collapse;
+  border-left-width: 1px;
+  border-right-width: 1.2px;
+  width: 100%;
+  max-width: 41%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table {
+    
+      display: block;
+      width: 100%;
+  }
+  .table-wrapper:before{
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+  }
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+      display: block;
+  }
+  .fl-table thead th:last-child{
+      border-bottom: none;
+  }
+  .fl-table thead {
+      float: left;
+  }
+  .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+  }
+  .fl-table td, .fl-table th {
+      
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+      display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+      background: none;
+  }
+  .fl-table tr:nth-child(even) {
+      background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+    
+      background: #F8F8F8;
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tr td:nth-child(even) {
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tbody td {
+      display: block;
+      text-align: center;
+  }
+}
+.comptable1{
+  margin-top:40px;
+  margin-left:50px;
+  border-collapse: collapse;
+}
+.conservative{
+  margin:2%;
+  margin-top:4%;
+}
+#secondTab{
+  margin-top:23%;
+}
+.c3{
+  margin-top:-28%;
+  margin-left:61%;
+}
+.labels{
+  display:block;
+}
+
+.lStockName{
+  margin-top:-11%;
+  margin-left:54%;
+}
+.lExchange{
+  margin-left:60%;
+  margin-top:-20px;
+}
+.lDate{
+  margin-left:65.5%;
+  margin-top:-20px;
+}
+.lQuantity{
+  margin-top:-20px;
+  margin-left:72%;
+}
+.lPS{
+  margin-top:-20px;
+  margin-left:80%;
+}
+.addSIP{
+  margin-top:50px;
+  margin-left:76%;
+  background-color: black; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  width: 200px;
+}
+.stockInput2{
+  opacity:0.0;
+}
+.table-wrapper2{
+  margin: 50px 50% 70px;
+  margin-top: 119px;
+}
+
+.tt {
+  border: none;
+  border-collapse: collapse;
+}
+
+.ttt {
+  border: none;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href = "stylesp.css"></link>
+<script src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/funnel.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<div class="menu">
+  <ul>
+    <li>My Portfolio</li>
+    <li>Top Stocks</li>
+    <li>Latest News</li>
+    <li>Markets</li>
+    <li>Stock Ideas</li>
+    <li>Dividends</li>
+  </ul>
+</div>
+<body onload= "initialFunctionportfolioComp()">
+    <h1 class = "CompositionTitle">Portfolio Composition</h1>
+    <div class = "performanceMeasures" style="display: inline-block; margin-top: 0%;">
+      <div style="display: inline-block;">
+          <div style="display: inline-block;">
+            <h3>Performance Measures</h3>
+            <li>Portfolio Beta: <span id = "beta1">0.8972153454</span></li>
+            <li>Treynor Ratio: <span id = "treynor1">0.258975961</span></li>
+            <li>Jensen's Alpha: <span id = "jensen1">0.152466227</span></li>
+            <li>VAR(99%): <span id = "var1">0.1750756238</span></li>
+          </ul>
+          </div>
+          <div id="container" style="display: inline-block; height: 300px;margin-top: 0px;"></div>
+        </div>
+      </div>
+        <table class = "comptable1" style="width:93.5%;">
+            <tr>
+              <th>Investment Type</th>
+              <th>Nominal(USD Equivalent)</th>
+              <th>Percentage</th>
+            </tr>
+            <tr>
+              <td>Digital Structured Investment</td>
+              <td>312000.0</td>
+              <td>1.02%</td>
+            </tr>
+              <tr>
+                <td>Equity Products</td>
+                <td>2870000.0</td>
+                <td>1.02%</td>
+              </tr>
+              <tr>
+                <td>Notes</td>
+                <td>5600000.0</td>
+                <td>1.82%</td>
+              </tr>
+              <tr>
+              <td>Fixed Income Bond</td>
+              <td>53579026.40</td>
+              <td>17.44%</td>
+            </tr>
+            
+            <tr>
+              <td>General Insurance</td>
+              <td>242022700.00</td>
+              <td>78.79%</td>
+            </tr>
+            
+          </table>
+          <div class = "d1"><canvas id="donut1" style="width:100%;max-width:300px"></canvas></div>
+          
+          <script type="text/javascript">
+        $(function () {
+          
+            var chartype = {
+                type: 'pyramid',
+                marginRight: 100
+            }
+            var chartitle = {
+                text: 'Portfolio pyramid',
+                x: -50
+            }
+            var chartplotoptions = {
+                series: {
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b> ({point.y:,.0f})',
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                        softConnector: true
+                    }
+                }
+            }
+            var chartlegend = {
+                enabled: false
+            }
+            var chartseries = [{
+                name: 'Nominal(USD Equivalent)',
+                data: [
+                ['General Insurance', 242022700.00],
+                ['Fixed Income Bond', 53579026.40],
+                    
+                    ['Equity Products', 2870000.0],
+                    
+                    ['Notes', 5600000.0],
+                    ['Digital Structured Investment', 312000.0],
+                    
+                ]
+            }]
+            $('#container').highcharts({
+                chart:chartype,
+                title: chartitle,
+                plotOptions:chartplotoptions,
+                legend:chartlegend,
+                series: chartseries
+            });
+        });
+        </script>
+        <h4 class = "conservative" style="margin-top: 1%;"> Conservative percentage allocation for each investment type is as follows </h4>
+        <div class = "c3" style="display: inline-block;margin-top: 2%;margin-bottom: 0%;margin-left: 10%;"><canvas id="chart3" width="600" height="300" ></canvas></div>
+      
+        <table class = "comptable1" id = "secondTab" style="width:93.5%;margin-top: 2%;margin-bottom: 10%;">
+          
+          <tr>
+            <th>Investment Type</th>
+            <th>Nominal(USD Equivalent)</th>
+            <th>Percentage</th>
+          </tr>
+          <tr>
+            <td>Digital Structured Investment</td>
+            <td>9215751.79</td>
+            <td>3.00%</td>
+          </tr>
+            <tr>
+              <td>Fixed Income Bond</td>
+              <td>184315035.84</td>
+              <td>60.00%</td>
+            </tr>
+            <tr>
+              <td>MF & UT</td>
+              <td>61438345.28</td>
+              <td>20.00%</td>
+            </tr>
+            <tr>
+            <td>Shares</td>
+            <td>52222593.49</td>
+            <td>17.00%</td>
+            </tr>
+          
+        </table>
+
+
+<script>
+
+new Chart("chart3", {
+  type: "doughnut",
+  data: {
+  labels: [
+    'Digital Structured Investments',
+    'Fixed Income Bonds',
+    'MF & UT',
+    'Shares'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [9215751.79, 184315035.84, 61438345.28, 52222593.49],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)',
+      'rgb(34,139,34)',
+      'rgb(0,0,128)',
+      'rgb(139,0,139)',
+      'rgb(210,105,30)',
+      'rgb(119,136,153)',
+      'rgb(178,34,34)'
+    ],
+    hoverOffset: 4,
+      }]
+},options: {
+         responsive:false,
+         legend: {
+            display: true,
+            position: 'right',
+            align:'middle',
+
+         },
+         
+    }
+});
+</script>
+</body>
+</html>
